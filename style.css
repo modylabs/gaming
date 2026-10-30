@@ -1,0 +1,344 @@
+:root {
+    --bg: #08090b;
+    --surface: #111318;
+    --surface2: #171920;
+    --line: #292c34;
+    --text: #f5f5f5;
+    --textAccent: #062E6F;
+    --muted: #a2a6b1;
+    --accent: #A8C7FA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a,
+button,
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.breadcrumb {
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.breadcrumb span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.separator {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.separator .app-icon {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.separator .app-info h3 {
+    line-height: 1.2;
+    margin: 8px 0 16px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+/* Ukuran file dan tanggal */
+.metadata {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+.meta-item {
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.meta-item svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* SECTION */
+.section {
+    padding-bottom: 30px;
+}
+
+.section-border {
+    border-bottom: 1px solid var(--line);
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-heading h2 {
+    margin: 10px 0;
+    font-size: clamp(27px, 4vw, 39px);
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+}
+
+.section-heading p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.panel {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 16px;
+}
+
+.button {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 19px;
+    border: 1px solid var(--accent);
+    border-radius: 7px;
+    background: var(--accent);
+    color: var(--textAccent);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    opacity: 0.86;
+    transform: translateY(-2px);
+}
+
+.warning {
+    padding: 12px;
+    background: #332621;
+    border: 1px solid #6C4A1A;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.warning span {
+    font-size: 12px;
+}
+
+.warning span ul {
+    padding: 16px;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+.eyebrow {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* FAQ */
+.faq {
+    max-width: 780px;
+    margin: auto;
+}
+
+.faq details:last-child {
+    border-bottom: none;
+}
+
+details {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+summary {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    color: var(--accent);
+    font-size: 21px;
+    font-weight: 400;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+details p {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+details ol {
+    padding-left: 16px;
+}
+
+details li {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 28px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 900;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--textAccent);
+    background: var(--accent);
+    border-radius: 9px;
+    place-items: center; 
+    display: grid;
+}
+
+.brand em {
+    font-style: normal; 
+    color: var(--accent);
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer a:hover {
+    color: var(--accent);
+}
+
+.disclaimer {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: #777c88;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+
+
+/* MOBILE */
+@media (max-width: 760px) {
+    .separator .app-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .metadata {
+        gap: 8px;
+    }
+    
+    .meta-item {
+        gap: 7px;
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    .meta-item svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .panel {
+        flex-direction: column;
+    }
+}
