@@ -43,6 +43,33 @@ img {
     -webkit-user-drag: none;
 }
 
+ul {
+    padding-left: 16px;
+}
+
+.site-header {
+    position: sticky;
+top: 0;
+z-index: 9999;
+width: 100%;
+background: rgba(8, 9, 11, 0.94);
+border-bottom: 1px solid var(--line);
+backdrop-filter: blur(50px);
+-webkit-backdrop-filter: blur(50px);
+}
+
+.navbar {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+.navbar .brand {
+    margin-left: 16px;
+}
+
 .breadcrumb {
     padding-top: 16px;
     padding-left: 16px;
@@ -188,8 +215,18 @@ img {
 }
 
 .post {
+    padding: 14px;
+    border: 1px solid var(--line);
+    background: #111318;
+    border-radius: 15px;
     margin-bottom: 30px;
 }
+
+.post span {
+    font-size: 14px;
+    color: #C4C7D0;
+}
+
 .eyebrow {
     font-size: 14px;
     font-weight: 800;
