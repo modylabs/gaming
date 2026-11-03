@@ -199,6 +199,12 @@ ul {
     transform: translateY(-2px);
 }
 
+.button.primary {
+    background: #1A73E8;
+    border-color: var(--line);
+    color: #fafafa;
+}
+
 .warning {
     padding: 12px;
     background: #332621;
